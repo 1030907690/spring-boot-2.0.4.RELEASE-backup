@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html  lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>正在跳转中...</title>
+</head>
+<body>
+
+<form  th:action="${redirectObject.action}" th:method="${redirectObject.method}" style="display: none;"  >
+    <span th:each="item : ${redirectObject.redirectObjectParamsList}">
+        <input type="text"  th:name="${item.key}" th:value="${item.value}" />
+    </span>
+
+</form>
+
+
+
+<script type="text/javascript">
+     document.getElementsByTagName("form")[0].submit();
+</script>
+
+</body>
+</html>

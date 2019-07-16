@@ -1,0 +1,40 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/game_server
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 100
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 10
+        max-wait: 100000
+
+#thymeleaf
+  thymeleaf:
+    cache: false # Enable template caching.
+    check-template: true # Check that the template exists before rendering it.
+    enable-spring-el-compiler: false # Enable the SpringEL compiler in SpringEL expressions.
+    check-template-location: true # Check that the templates location exists.
+    enabled: true # Enable Thymeleaf view resolution for Web frameworks.
+    encoding: UTF-8 # Template files encoding.
+    mode: HTML5 # Template mode to be applied to templates. See also StandardTemplateModeHandlers.
+    reactive:
+      max-chunk-size: 0 # Maximum size of data buffers used for writing to the response.
+    servlet:
+      content-type: text/html # Content-Type value written to HTTP responses.
+      produce-partial-output-while-processing: true # Whether Thymeleaf should start writing partial output as soon as possible or buffer until template processing is finished.
+    prefix: classpath:/templates/ # Prefix that gets prepended to view names when building a URL.
+    suffix: .html # Suffix that gets appended to view names when building a URL.
+
+
+logging:
+  config: classpath:logback-boot.xml
+
+

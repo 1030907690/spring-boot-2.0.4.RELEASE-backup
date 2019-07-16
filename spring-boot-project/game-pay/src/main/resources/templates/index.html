@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html  lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>welcome</title>
+</head>
+<body>
+
+<!--<form  th:action="${redirectObject.action}" th:method="${redirectObject.method}" >
+    <span th:each="item : ${redirectObject.redirectObjectParamsList}">
+        <input type="text"  th:name="${item.key}" th:value="${item.value}" />
+    </span>
+</form>-->
+
+<form  action="" method="post"  >
+
+    <input type="hidden" name="id"  />
+
+    <div class="form-group">
+        <label for="user_name" class="col-sm-2 control-label">名称</label>
+        <div class="col-xs-4">
+            <!--<input type="text" class="form-control" id="user_name" name="name" th:value="${name}" />-->
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="user_age" class="col-sm-2 control-label">年龄:</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" id="user_age" name="age" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label  class="col-sm-2 control-label">出生日期:</label>
+        <div class="col-xs-4">
+            <input type="date" class="form-control" id=" " name="birthday"  />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input class="btn btn-primary" type="submit" value="提交"/>
+            <input class="btn" type="button" value="返回" onclick="history.back()"/>
+        </div>
+    </div>
+</form>
+
+
+<script type="text/javascript">
+    //alert(1);
+    //document.getElementsByTagName("form")[0].submit();
+</script>
+
+</body>
+</html>
