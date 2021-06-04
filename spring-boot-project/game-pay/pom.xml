@@ -26,7 +26,7 @@
         <commons.beanutils.version>1.9.3</commons.beanutils.version>
         <commons.lang3.version>3.6</commons.lang3.version>
         <fastjson.version>1.2.47</fastjson.version>
-        <httpclient.version>4.3.2</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <dom4j.version>2.0.0</dom4j.version>
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
         <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
